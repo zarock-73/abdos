@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abdos Maison · ton coach abdos à la maison</title>
+<meta name="description" content="Trois séances guidées de 25 minutes par semaine, pendant 9 semaines. Gratuit, sans compte, sans pub, hors ligne. iPhone et Android.">
+<meta name="theme-color" content="#0B0D10">
+<meta name="color-scheme" content="dark">
+<meta property="og:title" content="Abdos Maison">
+<meta property="og:description" content="Ton coach abdos à la maison. Gratuit, sans compte, sans pub. iPhone et Android.">
+<meta property="og:image" content="https://zarock-73.github.io/abdos/app/icons/icon-512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="app/icons/favicon-32.png">
+<link rel="apple-touch-icon" href="app/icons/favicon-180.png">
+<style>
+@font-face{font-family:"Big Shoulders Display";font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/big-shoulders-display-latin-700-normal.woff2) format("woff2")}@font-face{font-family:"Big Shoulders Display";font-style:normal;font-weight:800;font-display:swap;src:url(assets/fonts/big-shoulders-display-latin-800-normal.woff2) format("woff2")}@font-face{font-family:"Big Shoulders Display";font-style:normal;font-weight:900;font-display:swap;src:url(assets/fonts/big-shoulders-display-latin-900-normal.woff2) format("woff2")}@font-face{font-family:"Hanken Grotesk";font-style:normal;font-weight:100 900;font-display:swap;src:url(assets/fonts/hanken-grotesk-latin-wght-normal.woff2) format("woff2")}
+:root{--bg:#0B0D10;--surface:#15181D;--surface-2:#1D2128;--line:#2A3038;--ink:#F3F5F7;--ink-2:#B7BFC9;--muted:#828C98;
+  --a:#3B7BFF;--b:#F2484B;--c:#FFC53D;--g:#34C77B;--ember:linear-gradient(140deg,#FFD24D,#FF7A3D 52%,#F23F4E);
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;--body:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--bg);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+h1,h2,h3,p,ol,ul,figure{margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 max(18px,env(safe-area-inset-left,0px)) 0 max(18px,env(safe-area-inset-right,0px))}
+.ic{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+header{padding:calc(env(safe-area-inset-top,0px) + 18px) 0 0}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:1.3rem;letter-spacing:.03em;text-transform:uppercase;text-decoration:none}
+.brand .tile{width:38px;height:38px;border-radius:10px;background:radial-gradient(95% 95% at 32% 22%,#262C36,#14171C 55%,#0B0D10);display:grid;place-items:center;box-shadow:0 0 0 1px #262C36}
+.brand .mk{width:21px;height:25px}
+.hero{display:grid;gap:34px;align-items:center;padding:42px 0 30px}
+@media (min-width:860px){.hero{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);padding:64px 0 40px}}
+.app-icon{width:88px;height:88px;border-radius:22px;background:radial-gradient(95% 95% at 32% 22%,#262C36,#14171C 55%,#0B0D10);display:grid;place-items:center;
+  box-shadow:0 18px 50px rgba(255,106,61,.18),0 0 0 1px #262C36;margin-bottom:22px}
+.app-icon .mk{width:48px;height:56px}
+h1{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(2.9rem,12vw,4.6rem);line-height:.86;letter-spacing:.005em}
+h1 em{font-style:normal;background:var(--ember);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{margin-top:18px;font-size:1.12rem;color:var(--ink-2);max-width:34em}
+.ctas{display:grid;gap:10px;margin-top:26px;max-width:440px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:0 22px;border-radius:16px;text-decoration:none;
+  font-family:var(--display);font-weight:800;font-size:1.35rem;letter-spacing:.03em;text-transform:uppercase}
+.btn small{font-family:var(--body);font-weight:600;font-size:.82rem;letter-spacing:0;text-transform:none;opacity:.75}
+.btn .t{display:grid;line-height:1.05;text-align:left;gap:3px}
+.ctas .btn{justify-content:flex-start;padding:10px 22px;min-height:64px}
+.btn-1{background:var(--ember);color:#14171B}
+.btn-2{background:var(--surface-2);color:var(--ink)}
+.btn .ic{width:20px;height:20px}
+html[data-os="android"] .ctas .ios-first{order:2}
+html[data-os="android"] .ctas .ios-first.btn-1{background:var(--surface-2);color:var(--ink)}
+html[data-os="android"] .ctas .and-first.btn-2{background:var(--ember);color:#14171B}
+.free{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:18px;color:var(--muted);font-size:.92rem}
+.free span{display:inline-flex;align-items:center;gap:6px}
+.free span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--g)}
+.phone{justify-self:center;width:min(320px,78vw);border-radius:44px;padding:10px;background:#1a1d22;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px #2a2f37}
+.phone img{display:block;width:100%;height:auto;border-radius:34px}
+section{padding:44px 0}
+h2{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(2rem,7vw,2.9rem);line-height:.92;margin-bottom:22px}
+.shots{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;scrollbar-width:thin}
+.shots figure{flex:none;width:min(240px,62vw);scroll-snap-align:start;display:grid;gap:10px}
+.shots img{display:block;width:100%;height:auto;border-radius:26px;box-shadow:0 0 0 1px #2a2f37}
+.shots figcaption{color:var(--ink-2);font-size:.92rem}
+.feats{display:grid;gap:12px}
+@media (min-width:700px){.feats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.feat{background:var(--surface);border-radius:20px;padding:20px;display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:start}
+.feat .bub{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--surface-2);color:var(--c)}
+.feat h3{font-size:1.08rem;margin-bottom:4px}
+.feat p{color:var(--ink-2);font-size:.95rem}
+.install{display:grid;gap:12px}
+@media (min-width:700px){.install{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.card{background:var(--surface);border-radius:20px;padding:22px}
+.card h3{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:1.5rem;margin-bottom:12px}
+.card ol{padding-left:1.2em;display:grid;gap:8px;color:var(--ink-2)}
+.card ol b{color:var(--ink)}
+.card .btn{margin-top:16px}
+.card .ic.inl{width:18px;height:18px;vertical-align:-3px}
+.method{background:var(--surface);border-radius:20px;padding:22px;color:var(--ink-2);display:grid;gap:10px}
+.method b{color:var(--ink)}
+footer{padding:30px 0 calc(env(safe-area-inset-bottom,0px) + 40px);color:var(--muted);font-size:.88rem;display:grid;gap:8px;border-top:1px solid var(--line);margin-top:20px}
+:focus-visible{outline:2.5px solid #8DB4FF;outline-offset:3px}
+</style>
+</head>
+<body>
+<header class="wrap"><a class="brand" href="./"><span class="tile"><svg class="mk" viewBox="31 27 46 54" aria-hidden="true"><defs><linearGradient id="mklp" x1="40" y1="26" x2="68" y2="82" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFD24D"/><stop offset=".48" stop-color="#FF7A3D"/><stop offset="1" stop-color="#F23F4E"/></linearGradient></defs><g transform="translate(54 54.5) scale(0.86) translate(-54 -53.75)"><g fill="url(#mklp)"><path d="M52.00 29.70 Q52.00 26.50 49.44 28.42 L32.78 40.92 Q30.00 43.00 30.40 46.45 L30.41 46.52 Q30.80 49.90 34.20 49.90 L48.60 49.90 Q52.00 49.90 52.00 46.50 Z"/><path d="M52.00 56.70 Q52.00 53.30 48.60 53.30 L34.56 53.30 Q31.16 53.30 31.49 56.68 L31.91 61.12 Q32.24 64.50 35.64 64.50 L48.60 64.50 Q52.00 64.50 52.00 61.10 Z"/><path d="M52.00 71.30 Q52.00 67.90 48.60 67.90 L36.03 67.90 Q32.63 67.90 33.09 71.27 L33.51 74.45 Q34.40 81.00 41.01 81.00 L46.40 81.00 Q52.00 81.00 52.00 75.40 Z"/><path d="M56.00 46.50 Q56.00 49.90 59.40 49.90 L73.80 49.90 Q77.20 49.90 77.59 46.52 L77.60 46.45 Q78.00 43.00 75.22 40.92 L58.56 28.42 Q56.00 26.50 56.00 29.70 Z"/><path d="M56.00 61.10 Q56.00 64.50 59.40 64.50 L72.36 64.50 Q75.76 64.50 76.09 61.12 L76.51 56.68 Q76.84 53.30 73.44 53.30 L59.40 53.30 Q56.00 53.30 56.00 56.70 Z"/><path d="M56.00 75.40 Q56.00 81.00 61.60 81.00 L66.99 81.00 Q73.60 81.00 74.49 74.45 L74.91 71.27 Q75.37 67.90 71.97 67.90 L59.40 67.90 Q56.00 67.90 56.00 71.30 Z"/></g><defs><linearGradient id="gllp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0.28"/><stop offset=".55" stop-color="#fff" stop-opacity="0"/></linearGradient></defs><path d="M52.00 29.70 Q52.00 26.50 49.44 28.42 L32.78 40.92 Q30.00 43.00 30.40 46.45 L30.41 46.52 Q30.80 49.90 34.20 49.90 L48.60 49.90 Q52.00 49.90 52.00 46.50 Z" fill="url(#gllp)"/><path d="M52.00 56.70 Q52.00 53.30 48.60 53.30 L34.56 53.30 Q31.16 53.30 31.49 56.68 L31.91 61.12 Q32.24 64.50 35.64 64.50 L48.60 64.50 Q52.00 64.50 52.00 61.10 Z" fill="url(#gllp)"/><path d="M52.00 71.30 Q52.00 67.90 48.60 67.90 L36.03 67.90 Q32.63 67.90 33.09 71.27 L33.51 74.45 Q34.40 81.00 41.01 81.00 L46.40 81.00 Q52.00 81.00 52.00 75.40 Z" fill="url(#gllp)"/><path d="M56.00 46.50 Q56.00 49.90 59.40 49.90 L73.80 49.90 Q77.20 49.90 77.59 46.52 L77.60 46.45 Q78.00 43.00 75.22 40.92 L58.56 28.42 Q56.00 26.50 56.00 29.70 Z" fill="url(#gllp)"/><path d="M56.00 61.10 Q56.00 64.50 59.40 64.50 L72.36 64.50 Q75.76 64.50 76.09 61.12 L76.51 56.68 Q76.84 53.30 73.44 53.30 L59.40 53.30 Q56.00 53.30 56.00 56.70 Z" fill="url(#gllp)"/><path d="M56.00 75.40 Q56.00 81.00 61.60 81.00 L66.99 81.00 Q73.60 81.00 74.49 74.45 L74.91 71.27 Q75.37 67.90 71.97 67.90 L59.40 67.90 Q56.00 67.90 56.00 71.30 Z" fill="url(#gllp)"/></g></svg></span>Abdos Maison</a></header>
+<main class="wrap">
+  <div class="hero">
+    <div>
+      <div class="app-icon" aria-hidden="true"><svg class="mk" viewBox="31 27 46 54" aria-hidden="true"><defs><linearGradient id="mklp" x1="40" y1="26" x2="68" y2="82" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFD24D"/><stop offset=".48" stop-color="#FF7A3D"/><stop offset="1" stop-color="#F23F4E"/></linearGradient></defs><g transform="translate(54 54.5) scale(0.86) translate(-54 -53.75)"><g fill="url(#mklp)"><path d="M52.00 29.70 Q52.00 26.50 49.44 28.42 L32.78 40.92 Q30.00 43.00 30.40 46.45 L30.41 46.52 Q30.80 49.90 34.20 49.90 L48.60 49.90 Q52.00 49.90 52.00 46.50 Z"/><path d="M52.00 56.70 Q52.00 53.30 48.60 53.30 L34.56 53.30 Q31.16 53.30 31.49 56.68 L31.91 61.12 Q32.24 64.50 35.64 64.50 L48.60 64.50 Q52.00 64.50 52.00 61.10 Z"/><path d="M52.00 71.30 Q52.00 67.90 48.60 67.90 L36.03 67.90 Q32.63 67.90 33.09 71.27 L33.51 74.45 Q34.40 81.00 41.01 81.00 L46.40 81.00 Q52.00 81.00 52.00 75.40 Z"/><path d="M56.00 46.50 Q56.00 49.90 59.40 49.90 L73.80 49.90 Q77.20 49.90 77.59 46.52 L77.60 46.45 Q78.00 43.00 75.22 40.92 L58.56 28.42 Q56.00 26.50 56.00 29.70 Z"/><path d="M56.00 61.10 Q56.00 64.50 59.40 64.50 L72.36 64.50 Q75.76 64.50 76.09 61.12 L76.51 56.68 Q76.84 53.30 73.44 53.30 L59.40 53.30 Q56.00 53.30 56.00 56.70 Z"/><path d="M56.00 75.40 Q56.00 81.00 61.60 81.00 L66.99 81.00 Q73.60 81.00 74.49 74.45 L74.91 71.27 Q75.37 67.90 71.97 67.90 L59.40 67.90 Q56.00 67.90 56.00 71.30 Z"/></g><defs><linearGradient id="gllp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0.28"/><stop offset=".55" stop-color="#fff" stop-opacity="0"/></linearGradient></defs><path d="M52.00 29.70 Q52.00 26.50 49.44 28.42 L32.78 40.92 Q30.00 43.00 30.40 46.45 L30.41 46.52 Q30.80 49.90 34.20 49.90 L48.60 49.90 Q52.00 49.90 52.00 46.50 Z" fill="url(#gllp)"/><path d="M52.00 56.70 Q52.00 53.30 48.60 53.30 L34.56 53.30 Q31.16 53.30 31.49 56.68 L31.91 61.12 Q32.24 64.50 35.64 64.50 L48.60 64.50 Q52.00 64.50 52.00 61.10 Z" fill="url(#gllp)"/><path d="M52.00 71.30 Q52.00 67.90 48.60 67.90 L36.03 67.90 Q32.63 67.90 33.09 71.27 L33.51 74.45 Q34.40 81.00 41.01 81.00 L46.40 81.00 Q52.00 81.00 52.00 75.40 Z" fill="url(#gllp)"/><path d="M56.00 46.50 Q56.00 49.90 59.40 49.90 L73.80 49.90 Q77.20 49.90 77.59 46.52 L77.60 46.45 Q78.00 43.00 75.22 40.92 L58.56 28.42 Q56.00 26.50 56.00 29.70 Z" fill="url(#gllp)"/><path d="M56.00 61.10 Q56.00 64.50 59.40 64.50 L72.36 64.50 Q75.76 64.50 76.09 61.12 L76.51 56.68 Q76.84 53.30 73.44 53.30 L59.40 53.30 Q56.00 53.30 56.00 56.70 Z" fill="url(#gllp)"/><path d="M56.00 75.40 Q56.00 81.00 61.60 81.00 L66.99 81.00 Q73.60 81.00 74.49 74.45 L74.91 71.27 Q75.37 67.90 71.97 67.90 L59.40 67.90 Q56.00 67.90 56.00 71.30 Z" fill="url(#gllp)"/></g></svg></div>
+      <h1>Ton coach <em>abdos</em>,<br>à la maison</h1>
+      <p class="lead">Trois séances guidées de 25 minutes par semaine, pendant 9 semaines. Un coach animé montre chaque mouvement, le chrono te guide, et tes cibles nutrition sont calculées pour toi.</p>
+      <div class="ctas">
+        <a class="btn btn-1 ios-first" href="app/"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.6v12.8a1 1 0 0 0 1.52.85l10.3-6.4a1 1 0 0 0 0-1.7L9.52 4.75A1 1 0 0 0 8 5.6z" fill="currentColor" stroke="none"/></svg><span class="t">Ouvrir l’appli<small>iPhone, ou sur ordinateur</small></span></a>
+        <a class="btn btn-2 and-first" href="abdos-maison.apk" download><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19.5h14"/></svg><span class="t">Télécharger l’APK<small>Android · 418 Ko</small></span></a>
+      </div>
+      <p class="free"><span>Gratuit</span><span>Sans compte</span><span>Sans pub</span><span>Hors ligne</span></p>
+    </div>
+    <div class="phone"><img src="assets/shot-today.webp" alt="Écran du jour avec la séance B" width="390" height="844"></div>
+  </div>
+
+  <section aria-labelledby="h-shots">
+    <h2 id="h-shots">Dans l’appli</h2>
+    <div class="shots"><figure><img src="assets/shot-today.webp" alt="Écran du jour avec la séance B" width="390" height="844" loading="lazy"><figcaption>La séance du jour, en un geste</figcaption></figure><figure><img src="assets/shot-player.webp" alt="Séance guidée avec chrono en anneau" width="390" height="844" loading="lazy"><figcaption>Le chrono te guide, l’animation montre le mouvement</figcaption></figure><figure><img src="assets/shot-sheet.webp" alt="Fiche exercice avec les muscles en couleur" width="390" height="844" loading="lazy"><figcaption>Muscles en couleur et version plus facile</figcaption></figure><figure><img src="assets/shot-progress.webp" alt="Écran des progrès" width="390" height="844" loading="lazy"><figcaption>Séances, semaines validées, record de planche</figcaption></figure></div>
+  </section>
+
+  <section aria-labelledby="h-feats">
+    <h2 id="h-feats">Ce qu’elle fait</h2>
+    <div class="feats">
+      <div class="feat"><span class="bub"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span><div><h3>La séance du jour, guidée</h3><p>Échauffement, chrono, bips et vibrations. Tu suis sans regarder l’écran, et une séance coupée reprend où elle s’est arrêtée.</p></div></div>
+      <div class="feat"><span class="bub"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4.6" r="2"/><path d="M8 21l1.6-7.6M16 21l-1.6-7.6M6 9.2l6 1.6 6-1.6M12 10.8v3.4"/></svg></span><div><h3>40 mouvements animés</h3><p>Chaque exercice est montré en boucle, muscles travaillés en couleur, avec une version plus facile quand ça devient dur.</p></div></div>
+      <div class="feat"><span class="bub"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20.5h16M7 16.5v-4M12 16.5v-8M17 16.5V5"/></svg></span><div><h3>Ton progrès en chiffres</h3><p>Séances faites, minutes, semaines validées et record de planche. Objectif bienveillant&#8239;: 3 séances par semaine.</p></div></div>
+      <div class="feat"><span class="bub"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v6a2 2 0 0 0 4 0V3M8 11v10M17.5 21V3c-2.3 1.3-3.4 4-3.4 7.2V14h3.4"/></svg></span><div><h3>Des cibles pour toi</h3><p>Calories et protéines calculées d’après ton profil, une journée type et la règle des 2 semaines pour ajuster.</p></div></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-install">
+    <h2 id="h-install">Installer</h2>
+    <div class="install">
+      <div class="card">
+        <h3>iPhone</h3>
+        <ol>
+          <li>Ouvre <b>https://zarock-73.github.io/abdos/app</b> dans <b>Safari</b>.</li>
+          <li>Touche <b>•••</b> à droite de la barre d’adresse, puis <b>Partager</b> <svg class="ic inl" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5v11M8 7l4-3.5L16 7M7.5 10.5H6a1.5 1.5 0 0 0-1.5 1.5v7A1.5 1.5 0 0 0 6 20.5h12a1.5 1.5 0 0 0 1.5-1.5v-7a1.5 1.5 0 0 0-1.5-1.5h-1.5"/></svg>. Sur un iOS plus ancien, le bouton Partager est en bas.</li>
+          <li>Choisis <b>Sur l’écran d’accueil</b>, laisse l’option <b>app web</b> activée, puis <b>Ajouter</b>.</li>
+        </ol>
+        <a class="btn btn-2" href="app/"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.6v12.8a1 1 0 0 0 1.52.85l10.3-6.4a1 1 0 0 0 0-1.7L9.52 4.75A1 1 0 0 0 8 5.6z" fill="currentColor" stroke="none"/></svg>Ouvrir l’appli</a>
+      </div>
+      <div class="card">
+        <h3>Android</h3>
+        <ol>
+          <li>Télécharge <b>abdos-maison.apk</b>. Chrome peut demander de confirmer le téléchargement.</li>
+          <li>Ouvre le fichier et autorise ton navigateur à <b>installer des applis inconnues</b> si Android le demande.</li>
+          <li>Touche <b>Installer</b>. Abdos Maison apparaît avec tes autres applis.</li>
+        </ol>
+        <a class="btn btn-2" href="abdos-maison.apk" download><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19.5h14"/></svg>Télécharger l’APK</a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-method">
+    <h2 id="h-method">La méthode, sans promesse magique</h2>
+    <div class="method">
+      <p>On ne choisit pas où le corps puise son gras. Les séances renforcent la sangle abdominale&#8239;; <b>le ventre fond avec un léger déficit calorique, les pas et le sommeil</b>. L’appli te donne les quatre leviers et te dit quand ajuster.</p>
+      <p>Le programme dure 9 semaines en quatre phases (bases, volume, intensité, test), avec 3 séances maison&#8239;: gainage, circuit cardio-muscu, abdos et obliques.</p>
+    </div>
+  </section>
+</main>
+<footer class="wrap">
+  <p><svg class="ic inl" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></svg> Tes données restent sur ton téléphone&#8239;: pas de compte, pas de pub, aucun traceur.</p>
+  <p>Pour les adultes en bonne santé. Les cibles sont des estimations, pas un avis médical. Douleur, grossesse ou suivi médical&#8239;: demande d’abord l’avis d’un médecin.</p>
+  <p>Version 1.3.1 · <a href="https://github.com/zarock-73/abdos">Code source sur GitHub</a></p>
+</footer>
+<script>
+(function(){
+  var ua = navigator.userAgent, ios = /iP(hone|ad|od)/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  document.documentElement.setAttribute('data-os', ios ? 'ios' : (/Android/i.test(ua) ? 'android' : 'other'));
+})();
+</script>
+</body>
+</html>
